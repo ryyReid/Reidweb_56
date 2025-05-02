@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reid | Settings</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #333;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #3a5f3a;
+        }
+
+        #content-side {
+            padding: 30px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 30px;
+            background: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+        }
+
+        select, input, button {
+            padding: 12px;
+            width: 100%;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            border: 2px solid #3a5f3a;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        select:focus, input:focus {
+            border-color: #3a5f3a;
+            outline: none;
+        }
+
+        button {
+            background-color: #3a5f3a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #2c472c;
+        }
+
+        a {
+            color: #3a5f3a;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .buttons-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background: #222;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #888;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            #content-side {
+                padding: 15px;
+            }
+
+            .form-section {
+                margin-bottom: 20px;
+            }
+
+            button, input, select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<script src="/storage/js/cloak.js"></script>
+<body>
+    <header>
+        <h1>Reid Settings</h1>
+    </header>
+
+    <div id="content-side">
+        <h2>Tab Cloaking</h2>
+        <div class="form-section">
+            <select id="presetSelect">
+                <option value="google">Google</option>
+                <option value="gmail">Gmail</option>
+                <option value="bing">Bing</option>
+                <option value="desmos">Desmos</option>
+                <option value="wikipedia">Wikipedia</option>
+                <option value="googledrive">Google Drive</option>
+            </select>
+            <div class="buttons-group">
+                <button id="saveButton">Select Cloak</button>
+                <button id="resetButton">Reset Cloak</button>
+            </div>
+            <p id="success">Success message here</p>
+        </div>
+
+        <h2>Panic Mode</h2>
+        <div class="form-section">
+            <input type="text" id="panicKey" placeholder="Choose a key combination" readonly>
+            <input type="url" id="panicUrl" placeholder="https://www.desmos.com/scientific">
+            <button onclick="saveSettings()">Set Panic Key</button>
+            <p id="success-panic">Success message here</p>
+        </div>
+
+        <h2>Data Management</h2>
+        <div class="form-section">
+            <div class="buttons-group">
+                <button onclick="importData()">Import Data</button>
+                <button onclick="exportData()">Export Data</button>
+                <button onclick="clearData()">Clear Data</button>
+            </div>
+        </div>
+
+        <h2>Link Behavior</h2>
+        <div class="form-section">
+            <label>
+                <input type="radio" name="openBlankSetting" value="true"> Open links in a new tab
+            </label>
+            <label>
+                <input type="radio" name="openBlankSetting" value="false"> Open links in the same tab
+            </label>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Reid Apps. All rights reserved.</p>
+    </footer>
+
+    <script src="storage/js/cloak.js"></script>
+    <script src="storage/js/settings.js"></script>
+    <script src="storage/js/data.js"></script>
+</body>
+</html>
