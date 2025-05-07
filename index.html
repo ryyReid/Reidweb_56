@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reid | Verse56</title>
+  <title>Reid | Verse</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <style>
@@ -48,6 +48,7 @@
       left: 0;
       overflow: hidden;
       z-index: 0;
+      pointer-events: none; /* ✅ fix to make buttons clickable */
     }
 
     .star {
@@ -192,6 +193,7 @@
       justify-content: space-between;
       gap: 30px;
       margin-top: 30px;
+      padding: 0 30px;
     }
 
   </style>
