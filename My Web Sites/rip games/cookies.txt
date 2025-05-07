@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.itch.io	TRUE	/	FALSE	1999999999	itchio_token	WyJqSHNCIiwxNzQ2NTc5ODQzLCJJbHJqcjRvMG9tVGVSZ1MiXQ%3d%3d%2eixv%2boHzFjgMPdZBUFyPg4qJrmb8%3d
+.itch.io	TRUE	/	FALSE	1999999999	ref%3aregister%3areferrer	http%3a%2f%2fserpexnessie%2eitch%2eio%2fscale%2dthe%2ddepths
+
