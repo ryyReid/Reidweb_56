@@ -1,12 +1,12 @@
 body {
-    font-family: 'Orbitron', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #000;
-    color: #1db954;
+    background-color: #fff;
+    color: #000;
     margin: 0;
+    padding-top: 100px;
 }
 
 .proxy-container {
@@ -15,31 +15,48 @@ body {
 
 h1 {
     margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
+h1 span:nth-child(1) { color: #4285F4; }
+h1 span:nth-child(2) { color: #DB4437; }
+h1 span:nth-child(3) { color: #F4B400; }
+h1 span:nth-child(4) { color: #4285F4; }
+h1 span:nth-child(5) { color: #0F9D58; }
+h1 span:nth-child(6) { color: #DB4437; }
+
 input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #1db954;
-    background-color: #000;
-    color: #1db954;
-    border-radius: 5px;
-    font-family: 'Orbitron', sans-serif;
+    width: 500px;
+    padding: 10px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="text"]:hover, input[type="text"]:focus {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 button {
     padding: 10px 20px;
-    border: 1px solid #1db954;
-    background-color: #000;
-    color: #1db954;
-    border-radius: 5px;
+    border: 1px solid #f8f9fa;
+    background-color: #f8f9fa;
+    color: #3c4043;
+    border-radius: 4px;
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
-    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: border-color 0.3s;
 }
 
 button:hover {
-    background-color: #1db954;
-    color: #000;
-    transform: scale(1.1);
+    border-color: #dadce0;
+}
+
+#proxy-frame {
+    margin-top: 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
 }

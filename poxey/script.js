@@ -1,9 +1,11 @@
+const form = document.getElementById('proxy-form');
 const urlInput = document.getElementById('urlInput');
-const proxyButton = document.getElementById('proxyButton');
+const proxyFrame = document.getElementById('proxy-frame');
 
-proxyButton.addEventListener('click', () => {
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
     const url = urlInput.value;
     if (url) {
-        window.location.href = `/proxy?url=${encodeURIComponent(url)}`;
+        proxyFrame.src = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
     }
 });
